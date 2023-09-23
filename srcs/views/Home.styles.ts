@@ -1,7 +1,4 @@
 export default styles = {
-	fullHeight: {
-		height: '100%',
-	},
 	container: {
 		padding: 20,
 		justifyContent: 'center',
@@ -21,5 +18,6 @@ export default styles = {
 	buttonText: {
 		color: 'white',
 		fontSize: 20,
+		fontFamily: 'AvenirNext-Bold',
 	},
 };
