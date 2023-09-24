@@ -18,7 +18,15 @@ const classes = [
 	{slug: 'fighter', name: 'Guerrier'},
 ];
 
-function BasicPhase({perso, setPerso, nextStep}) {
+function BasicPhase({
+	perso,
+	setPerso,
+	nextStep,
+}: {
+	perso: any;
+	setPerso: any;
+	nextStep: any;
+}) {
 	return (
 		<View style={styles.container}>
 			<SelectDropdown

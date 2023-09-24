@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, View, Pressable} from 'react-native';
 import styles from './Home.styles';
 
-function Home({navigation}) {
+function Home({navigation}: {navigation: any}) {
 	return (
 		<View style={styles.container}>
 			<Text style={styles.title}>DnD Companion</Text>

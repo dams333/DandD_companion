@@ -1,13 +1,13 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {ImageBackground} from 'react-native';
+import {ImageBackground, StyleProp, ViewStyle} from 'react-native';
 import Home from '../views/Home/Home';
 import CreatePerso from '../views/CreatePerso/CreatePerso';
 
 const areaStyle = {
 	height: '100%',
-};
+} as StyleProp<ViewStyle>;
 
 const Stack = createNativeStackNavigator();
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
+import {SafeAreaView, StatusBar, StyleProp, ViewStyle} from 'react-native';
 import Router from './router/Router';
 
 const areaStyle = {
 	height: '100%',
-};
+} as StyleProp<ViewStyle>;
 
 function App() {
 	return (

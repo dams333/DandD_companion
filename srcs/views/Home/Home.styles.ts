@@ -1,3 +1,6 @@
+import {StyleProp, ViewStyle} from 'react-native';
+
+// @ts-ignore
 export default styles = {
 	container: {
 		padding: 20,
@@ -20,4 +23,4 @@ export default styles = {
 		fontSize: 20,
 		fontFamily: 'AvenirNext-Bold',
 	},
-};
+} as Record<string, StyleProp<ViewStyle>>;

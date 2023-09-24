@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Pressable} from 'react-native';
+import {View, Text, Pressable, StyleProp, ViewStyle} from 'react-native';
 import styles from './CreatePerso.styles';
 import BasicPhase from './BasicPhase';
 
@@ -10,9 +10,9 @@ enum Phase {
 
 const areaStyle = {
 	height: '100%',
-};
+} as StyleProp<ViewStyle>;
 
-function CreatePerso({navigation}) {
+function CreatePerso({navigation}: {navigation: any}) {
 	const [phase, setPhase] = React.useState<Phase>(Phase.Basic);
 	const [perso, setPerso] = React.useState<any>({});
 	return (
