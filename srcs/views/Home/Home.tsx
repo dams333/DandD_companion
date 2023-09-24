@@ -6,7 +6,9 @@ function Home({navigation}) {
 	return (
 		<View style={styles.container}>
 			<Text style={styles.title}>DnD Companion</Text>
-			<Pressable style={styles.button}>
+			<Pressable
+				style={styles.button}
+				onPress={() => navigation.navigate('Create')}>
 				<Text style={styles.buttonText}>Créer un personnage</Text>
 			</Pressable>
 			<Pressable style={styles.button}>
