@@ -1,5 +1,6 @@
 export default styles = {
 	container: {
+		marginTop: -40,
 		padding: 20,
 		justifyContent: 'center',
 		alignItems: 'center',
