@@ -1,10 +1,11 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Pressable} from 'react-native';
 import styles from './CreatePerso.styles';
 import BasicPhase from './BasicPhase';
 
 enum Phase {
 	Basic,
+	P2,
 }
 
 const areaStyle = {
@@ -18,7 +19,11 @@ function CreatePerso({navigation}) {
 		<View style={areaStyle}>
 			<Text style={styles.title}>Personnage</Text>
 			{phase === Phase.Basic && (
-				<BasicPhase perso={perso} setPerso={setPerso} />
+				<BasicPhase
+					perso={perso}
+					setPerso={setPerso}
+					nextStep={() => setPhase(Phase.P2)}
+				/>
 			)}
 		</View>
 	);

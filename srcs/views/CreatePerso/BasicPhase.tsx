@@ -1,14 +1,24 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Pressable} from 'react-native';
 import styles from './CreatePerso.styles';
 import SelectDropdown from 'react-native-select-dropdown';
 
 const races = [
-	{slug: 'humain', name: 'Humain'},
-	{slug: 'elfe', name: 'Elfe'},
+	{slug: 'human', name: 'Humain'},
+	{slug: 'elf', name: 'Elfe'},
+	{slug: 'dwarf', name: 'Nain'},
+	{slug: 'halfling', name: 'Halfelin'},
 ];
 
-function BasicPhase({perso, setPerso}) {
+const classes = [
+	{slug: 'barbarian', name: 'Barbare'},
+	{slug: 'bard', name: 'Barde'},
+	{slug: 'cleric', name: 'Clerc'},
+	{slug: 'druid', name: 'Druide'},
+	{slug: 'fighter', name: 'Guerrier'},
+];
+
+function BasicPhase({perso, setPerso, nextStep}) {
 	return (
 		<View style={styles.container}>
 			<SelectDropdown
@@ -20,6 +30,18 @@ function BasicPhase({perso, setPerso}) {
 				rowTextForSelection={item => item.name}
 				buttonTextAfterSelection={item => item.name}
 			/>
+			<SelectDropdown
+				data={classes}
+				defaultButtonText="Classe"
+				onSelect={selectedItem => {
+					console.log(selectedItem.slug);
+				}}
+				rowTextForSelection={item => item.name}
+				buttonTextAfterSelection={item => item.name}
+			/>
+			<Pressable style={styles.button} onPress={nextStep}>
+				<Text style={styles.buttonText}>Continuer</Text>
+			</Pressable>
 		</View>
 	);
 }

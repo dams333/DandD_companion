@@ -5,6 +5,7 @@ export default styles = {
 		justifyContent: 'center',
 		alignItems: 'center',
 		flex: 1,
+		gap: 20,
 	},
 	title: {
 		marginTop: 20,
@@ -13,7 +14,10 @@ export default styles = {
 		fontFamily: 'DragonHunter',
 	},
 	button: {
-		marginTop: 20,
+		marginTop: 40,
+		justifyContent: 'center',
+		alignItems: 'center',
+		width: 200,
 		padding: 7,
 		borderRadius: 10,
 		backgroundColor: '#1E90FF',
